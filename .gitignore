@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+.env
+*.csv
+config.yaml
+audit_report.html
+.venv/
+venv/

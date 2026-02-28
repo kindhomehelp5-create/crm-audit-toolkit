@@ -1,0 +1,29 @@
+# CRM Audit Toolkit — Example Configuration
+# Copy this file to config.yaml and adjust to match your CRM export.
+
+# Column mappings (map your CRM export columns to toolkit fields)
+columns:
+  deal_id: "Opportunity ID"
+  stage: "Sales Stage"
+  amount: "Amount (USD)"
+  created_at: "Created Date"
+  updated_at: "Last Modified"
+  owner: "Owner Full Name"
+  status: "Stage Category"
+
+# Thresholds
+thresholds:
+  stale_deal_days: 30
+  speed_to_lead_target_hours: 4
+  min_data_quality_score: 70
+
+# Pipeline stages (in order)
+stages:
+  - "New Lead"
+  - "Qualified"
+  - "Demo Scheduled"
+  - "Demo Completed"
+  - "Proposal Sent"
+  - "Negotiation"
+  - "Closed Won"
+  - "Closed Lost"
