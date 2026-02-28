@@ -27,3 +27,23 @@ stages:
   - "Negotiation"
   - "Closed Won"
   - "Closed Lost"
+
+# ─── Telegram Parser ────────────────────────────────
+# Get api_id and api_hash at https://my.telegram.org/apps
+telegram:
+  api_id: 12345678
+  api_hash: "your_api_hash_here"
+  phone: "+79001234567"
+  session_name: "crm_audit_session"
+
+# ─── AmoCRM Integration ─────────────────────────────
+# Long-lived token from Settings → Integrations → API
+amocrm:
+  domain: "yourcompany"              # yourcompany.amocrm.ru
+  access_token: "your_token_here"
+  pipeline_id: null                  # null = default pipeline
+  status_id: null                    # null = first stage
+  responsible_user_id: null          # null = token owner
+  tags:
+    - "telegram"
+    - "parsed"
